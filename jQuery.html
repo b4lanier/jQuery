@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="">
+    </head>
+
+    <script>        //use $ to call jQuery API's
+        $(document).ready(function(){   //as soon as this webpage is loaded, do the function
+            $("html").append(       //add content to the end of the html element. \ means it will continue on the next line
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("p").css({"color":"red"});    //use jQuery to call CSS to make <p> red
+            $("#2").css({"color":"blue"});  //use jQuery to make ID '2' blue
+            $("#3").click(function(){       //us jQuery if you click on ID '3' to hide h1 element
+                $('h1').hide();
+            });
+        });
+    </script>
+
+</html>
